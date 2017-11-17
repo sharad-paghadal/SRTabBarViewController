@@ -13,6 +13,8 @@
 		AE5106871FBF42E000C0BEDF /* SRTabBarViewController.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE5106851FBF42E000C0BEDF /* SRTabBarViewController.xcdatamodeld */; };
 		AE5106891FBF42E000C0BEDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE5106881FBF42E000C0BEDF /* Assets.xcassets */; };
 		AE51068C1FBF42E000C0BEDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE51068A1FBF42E000C0BEDF /* LaunchScreen.storyboard */; };
+		AE5106941FBF432500C0BEDF /* SRTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5106931FBF432500C0BEDF /* SRTabBarViewController.swift */; };
+		AE5106961FBF434E00C0BEDF /* SRTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5106951FBF434E00C0BEDF /* SRTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		AE5106881FBF42E000C0BEDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE51068B1FBF42E000C0BEDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE51068D1FBF42E000C0BEDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE5106931FBF432500C0BEDF /* SRTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTabBarViewController.swift; sourceTree = "<group>"; };
+		AE5106951FBF434E00C0BEDF /* SRTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				AE51068A1FBF42E000C0BEDF /* LaunchScreen.storyboard */,
 				AE51068D1FBF42E000C0BEDF /* Info.plist */,
 				AE5106851FBF42E000C0BEDF /* SRTabBarViewController.xcdatamodeld */,
+				AE5106931FBF432500C0BEDF /* SRTabBarViewController.swift */,
+				AE5106951FBF434E00C0BEDF /* SRTabBar.swift */,
 			);
 			path = SRTabBarViewController;
 			sourceTree = "<group>";
@@ -142,6 +148,8 @@
 				AE5106811FBF42E000C0BEDF /* ViewController.swift in Sources */,
 				AE5106871FBF42E000C0BEDF /* SRTabBarViewController.xcdatamodeld in Sources */,
 				AE51067F1FBF42E000C0BEDF /* AppDelegate.swift in Sources */,
+				AE5106961FBF434E00C0BEDF /* SRTabBar.swift in Sources */,
+				AE5106941FBF432500C0BEDF /* SRTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
