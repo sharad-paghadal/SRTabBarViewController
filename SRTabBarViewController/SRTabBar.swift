@@ -19,6 +19,7 @@ class SRTabBar: UIView {
     var stackView = UIStackView()
     var delegate: SRTabBarDelegate?
     var selectedIndex = Constant.initialPage
+    var arrayButtonTitle = [UIButton]()
     
     init(frame: CGRect, title: [String]) {
         super.init(frame: frame)
@@ -38,12 +39,15 @@ class SRTabBar: UIView {
             stackView.addArrangedSubview(button)
             button.tag = titleForViewController.index(of: title)!
             button.addTarget(self, action: #selector(selectedButton(_:)), for: UIControlEvents.touchUpInside)
+            arrayButtonTitle.append(button)
         }
         addSubview(stackView)
         
         indicator = UIView(frame: CGRect(x: 0, y: frame.size.height - 5, width: frame.size.width / CGFloat(titleForViewController.count), height: 5))
         indicator.backgroundColor = UIColor.blue
         addSubview(indicator)
+        
+        changeButtonTitleColor()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -77,7 +81,6 @@ class SRTabBar: UIView {
     }
     
     @objc func selectedButton(_ sender: UIButton) {
-        
         if selectedIndex < sender.tag {
             delegate?.SRTabBarDelegate(didSelectedButtonAt: sender.tag, with: .forward)
         }else if selectedIndex > sender.tag {
@@ -91,5 +94,17 @@ class SRTabBar: UIView {
             self.indicator.frame.origin.x = self.indicator.frame.size.width * CGFloat(index)
         }
         selectedIndex = index
+        changeButtonTitleColor()
+    }
+    
+    func changeButtonTitleColor() {
+        for i in 0 ..< titleForViewController.count {
+            let button = arrayButtonTitle[i]
+            if i == selectedIndex {
+                button.setTitleColor(UIColor.brown, for: .normal)
+            }else {
+                button.setTitleColor(UIColor.blue, for: .normal)
+            }
+        }
     }
 }
