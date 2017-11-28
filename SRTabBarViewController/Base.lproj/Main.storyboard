@@ -14,12 +14,27 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SRTabBarViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="SRTabBarViewController" customModule="SRTabBarViewController" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4UI-Rp-6Bx" customClass="SRTabBarViewController" customModule="SRTabBarViewController" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4UI-Rp-6Bx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9hC-Ka-8MR"/>
+                            <constraint firstItem="4UI-Rp-6Bx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="CuQ-Co-ohe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4UI-Rp-6Bx" secondAttribute="bottom" id="Ryn-VQ-oub"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4UI-Rp-6Bx" secondAttribute="trailing" id="c7t-ci-WG1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="MyView" destination="4UI-Rp-6Bx" id="cSm-RV-ULa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

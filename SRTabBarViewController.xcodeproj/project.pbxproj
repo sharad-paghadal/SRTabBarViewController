@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE43302C1FC1BBB40042F29C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43302B1FC1BBB40042F29C /* Constant.swift */; };
 		AE51067F1FBF42E000C0BEDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51067E1FBF42E000C0BEDF /* AppDelegate.swift */; };
 		AE5106811FBF42E000C0BEDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5106801FBF42E000C0BEDF /* ViewController.swift */; };
 		AE5106841FBF42E000C0BEDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5106821FBF42E000C0BEDF /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE43302B1FC1BBB40042F29C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AE51067B1FBF42E000C0BEDF /* SRTabBarViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRTabBarViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE51067E1FBF42E000C0BEDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE5106801FBF42E000C0BEDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				AE5106851FBF42E000C0BEDF /* SRTabBarViewController.xcdatamodeld */,
 				AE5106931FBF432500C0BEDF /* SRTabBarViewController.swift */,
 				AE5106951FBF434E00C0BEDF /* SRTabBar.swift */,
+				AE43302B1FC1BBB40042F29C /* Constant.swift */,
 			);
 			path = SRTabBarViewController;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				AE51067F1FBF42E000C0BEDF /* AppDelegate.swift in Sources */,
 				AE5106961FBF434E00C0BEDF /* SRTabBar.swift in Sources */,
 				AE5106941FBF432500C0BEDF /* SRTabBarViewController.swift in Sources */,
+				AE43302C1FC1BBB40042F29C /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
