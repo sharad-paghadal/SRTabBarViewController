@@ -14,6 +14,21 @@ protocol SRTabBarDelegate {
 
 class SRTabBar: UIView {
     
+    /// Indicator color
+    var indicatorColor: UIColor = UIColor.blue
+    
+    /// Tab bar button color
+    var buttonTitleFontColor: UIColor = UIColor.blue
+    
+    /// Tab bar selected button color
+    var buttonTitleSelectedFontColor: UIColor = UIColor.brown
+    
+    /// Tab bar background color
+    var tabBarBackgroundColor: UIColor = UIColor.yellow
+    
+    /// Indicator height
+    var indicatorHeight: CGFloat = 5
+    
     var titleForViewController: Array<String> = Array<String>()
     var indicator = UIView()
     var stackView = UIStackView()
@@ -26,7 +41,7 @@ class SRTabBar: UIView {
         
         self.titleForViewController = title
         self.autoresizingMask = [.flexibleWidth]
-        self.backgroundColor = UIColor.yellow
+        self.backgroundColor = tabBarBackgroundColor
         
         stackView = UIStackView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
         stackView.autoresizingMask = [.flexibleWidth]
@@ -35,6 +50,7 @@ class SRTabBar: UIView {
         stackView.translatesAutoresizingMaskIntoConstraints = true
         for title in titleForViewController {
             let button = UIButton(type: .system)
+            button.tintColor = buttonTitleFontColor
             button.setTitle(title, for: .normal)
             stackView.addArrangedSubview(button)
             button.tag = titleForViewController.index(of: title)!
@@ -43,7 +59,7 @@ class SRTabBar: UIView {
         }
         addSubview(stackView)
         
-        indicator = UIView(frame: CGRect(x: 0, y: frame.size.height - 5, width: frame.size.width / CGFloat(titleForViewController.count), height: 5))
+        indicator = UIView(frame: CGRect(x: 0, y: frame.size.height - 5, width: frame.size.width / CGFloat(titleForViewController.count), height: indicatorHeight))
         indicator.backgroundColor = UIColor.blue
         addSubview(indicator)
         
@@ -52,7 +68,6 @@ class SRTabBar: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        fatalError("init(coder:) has not been implemented")
     }
     
     override func awakeFromNib() {
@@ -101,9 +116,9 @@ class SRTabBar: UIView {
         for i in 0 ..< titleForViewController.count {
             let button = arrayButtonTitle[i]
             if i == selectedIndex {
-                button.setTitleColor(UIColor.brown, for: .normal)
+                button.setTitleColor(buttonTitleSelectedFontColor, for: .normal)
             }else {
-                button.setTitleColor(UIColor.blue, for: .normal)
+                button.setTitleColor(buttonTitleFontColor, for: .normal)
             }
         }
     }

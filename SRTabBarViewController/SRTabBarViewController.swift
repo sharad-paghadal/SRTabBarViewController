@@ -9,6 +9,41 @@
 import UIKit
 
 class SRTabBarViewController: UIView, UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIScrollViewDelegate, SRTabBarDelegate{
+    
+    /// Indicator color
+    var indicatorColor: UIColor = UIColor.blue {
+        didSet {
+            tabBarView?.indicatorColor = indicatorColor
+        }
+    }
+    
+    /// Tab bar button color
+    var buttonTitleFontColor: UIColor = UIColor.blue {
+        didSet {
+            tabBarView?.buttonTitleFontColor = buttonTitleFontColor
+        }
+    }
+    
+    /// Tab bar selected button color
+    var buttonTitleSelectedFontColor: UIColor = UIColor.brown {
+        didSet {
+            tabBarView?.buttonTitleSelectedFontColor = buttonTitleSelectedFontColor
+        }
+    }
+    
+    /// Tab bar background color
+    var tabBarBackgroundColor: UIColor = UIColor.yellow {
+        didSet {
+            tabBarView?.tabBarBackgroundColor = tabBarBackgroundColor
+        }
+    }
+    
+    /// Indicator height
+    var indicatorHeight: CGFloat = 5 {
+        didSet {
+            tabBarView?.indicatorHeight = indicatorHeight
+        }
+    }
 
     var pages: Array<UIViewController> = Array<UIViewController>()
     var titleForViewController: Array<String> = Array<String>()
@@ -36,8 +71,6 @@ class SRTabBarViewController: UIView, UIPageViewControllerDataSource, UIPageView
         pageControl.numberOfPages = pages.count
         pageControl.currentPage = Constant.initialPage
 
-        /// Uncomment this line if you want dot at the top of view.
-//        addSubview(pageControl);
         tabBarView = SRTabBar(frame: CGRect(x: frame.origin.x, y: frame.origin.y, width: self.frame.size.width, height: CGFloat(Constant.tabBarHeight)), title: titleForViewController)
         tabBarView?.delegate = self
         addSubview(tabBarView!)

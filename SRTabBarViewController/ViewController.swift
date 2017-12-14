@@ -12,6 +12,23 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var MyView: SRTabBarViewController! {
         didSet {
+            
+//            // Customisation Tab bar default value
+//            /// Indicator color
+//            MyView.indicatorColor = UIColor.blue
+//
+//            /// Tab bar button color
+//            MyView.buttonTitleFontColor = UIColor.blue
+//
+//            /// Tab bar selected button color
+//            MyView.buttonTitleSelectedFontColor = UIColor.brown
+//
+//            /// Tab bar background color
+//            MyView.tabBarBackgroundColor = UIColor.yellow
+//
+//            /// Indicator height
+//            MyView.indicatorHeight = 5
+            
             let page1 = ViewController()
             page1.view.backgroundColor = UIColor.red
             let page2 = ViewController()
